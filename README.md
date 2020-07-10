@@ -17,9 +17,9 @@ _to calculate the integral form. Also, if you are lazy to calculate the integral
 
 **NOTE:** 
 
-Here `a` must be an integer and the _MIN_ value of the integral interval
+Here `a` must be a float value and the _MIN_ value of the integral interval
 
-`b` must be an integer and the _MAX_ value of the integral interval
+`b` must be a float value and the _MAX_ value of the integral interval
 
 `n` is the amount of data point samples used to approximate the integral 
 (the higher n is, the more accurate the approximation, the slower the calculation)

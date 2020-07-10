@@ -2,7 +2,7 @@ import sys
 from math import sqrt
 
 
-def calculate_delta_x(a, b, n) -> float:
+def calculate_delta_x(a: float, b: float, n: int) -> float:
 	"""
 	Calculate delta_x = (b - a) / n
 	n = data points samples
@@ -12,14 +12,14 @@ def calculate_delta_x(a, b, n) -> float:
 	return (b - a) / n
 
 
-def get_xi(a, i, delta_x) -> float:
+def get_xi(a: float, i: int, delta_x: float) -> float:
 	"""
 	Calculating x_i = a + i * delta_x
 	"""
 	return a + (i * delta_x)
 
 
-def function(x) -> float:
+def function(x: float) -> float:
 	"""
 	The function of which the integral needs to be approximated
 	NOTE: change function here if you want to approximate integral of another function 
@@ -27,7 +27,7 @@ def function(x) -> float:
 	return 1 / sqrt(x + 1)
 
 
-def calculate_trapezoidal(func, a, b, n) -> float:
+def calculate_trapezoidal(func, a: float, b: float, n: int) -> float:
 	"""
 	Using trapezoidal method to approximate integral of a given function
 	
@@ -62,7 +62,7 @@ def calculate_trapezoidal(func, a, b, n) -> float:
 		print("process interrupted. Last updated result: {}".format(constant_num * res))
 
 
-def calculate_simpsons(func, a, b, n) -> float or str:
+def calculate_simpsons(func, a: float, b: float, n: int) -> float or str:
 	"""
 	Using Simpsons method to approximate integral of a given function
 	NOTE: this method should only be used on EVEN NUMBER OF n
@@ -73,6 +73,7 @@ def calculate_simpsons(func, a, b, n) -> float or str:
 	:param: n: amount of data point samples used to approximate the integral (MUST BE EVEN NUMBER OF DATA POINTS)
 	:return: float value of the approximation
 	"""
+
 	if n % 2 != 0:
 		return "n must be an even number"
 
@@ -103,7 +104,7 @@ def calculate_simpsons(func, a, b, n) -> float or str:
 		print("process interrupted. Last updated result: {}".format(constant_num * res))
 
 
-def approximate_integral(func, a, b, n):
+def approximate_integral(func, a: float, b: float, n: int) -> float:
 	"""
 	Main method to approximate integral. Depending on n, Simpsons or trapezoid method is used to calculate the integral.
 	NOTE: the higher n is, the more accurate the approximation, the slower the calculation
@@ -117,6 +118,7 @@ def approximate_integral(func, a, b, n):
 	:param n: amount of data point samples used to approximate the integral
 	:return: float value of the approximation
 	"""
+
 	if n % 2 == 0:
 		return calculate_simpsons(func, a, b, n)
 	else:
@@ -124,8 +126,8 @@ def approximate_integral(func, a, b, n):
 
 
 if __name__ == '__main__':
-	a = int(sys.argv[1])
-	b = int(sys.argv[2])
+	a = float(sys.argv[1])
+	b = float(sys.argv[2])
 	n = int(sys.argv[3])
 	
 	print(approximate_integral(function, a, b, n))
