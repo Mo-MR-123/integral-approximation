@@ -11,11 +11,17 @@ _to calculate the integral form. Also, if you are lazy to calculate the integral
 
 **How to use:**
 
-_1._ Open terminal and make sure you are in folder where the script is located. 
-_2._ Type `python approximateIntegral.py a b n` on the terminal
+1. Open terminal and make sure you are in folder where the script is located. 
 
-**NOTE:** Here `a` must be an integer and the _MIN_ value of the integral interval,
-`b` must be an integer and the _MAX_ value of the integral interval and `n` is the amount of data point samples used to approximate the integral 
+2. Type `python approximateIntegral.py a b n` on the terminal
+
+**NOTE:** 
+
+Here `a` must be an integer and the _MIN_ value of the integral interval
+
+`b` must be an integer and the _MAX_ value of the integral interval
+
+`n` is the amount of data point samples used to approximate the integral 
 (the higher n is, the more accurate the approximation, the slower the calculation)
 
 **TODO LIST:**
