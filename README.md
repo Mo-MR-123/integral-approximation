@@ -3,11 +3,11 @@
 **Why even approximate integrals?**
 
 _Approximation of integrals can come in handy when you don't know the integral function or the function might be too complex_ 
-_to calculate the integral form. Also, if you are lazy to calculate the integral from of the function and want a quick approximation._
+_to calculate the integral form. Also, if you are lazy to calculate the integral form of the function and want to have a quick approximation._
 
 **Requirements:**
 
-- Python version 3.7 or up (so all version that include `futures` package).
+- Python version 3.7 or up.
 
 **How to use:**
 
