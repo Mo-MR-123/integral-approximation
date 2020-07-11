@@ -126,8 +126,11 @@ def approximate_integral(func, a: float, b: float, n: int) -> float:
 
 
 if __name__ == '__main__':
-	a = float(sys.argv[1])
-	b = float(sys.argv[2])
-	n = int(sys.argv[3])
-	
-	print(approximate_integral(function, a, b, n))
+	try:
+		a = float(sys.argv[1])
+		b = float(sys.argv[2])
+		n = int(sys.argv[3])
+
+		print(approximate_integral(function, a, b, n))
+	except Exception as e:
+		print(e)
